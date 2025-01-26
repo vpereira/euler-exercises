@@ -1,22 +1,25 @@
 import math
 
-def calculate_horizontal(_rows):
-  _products = []
-  for row in _rows:
-    for i in range(0, len(row)):
-      _products.append(math.prod([int(j) for j in row[i:i + 4]]))
 
-  # return the highest number
-  return sorted(_products)[-1]
+def calculate_horizontal(_rows):
+    _products = []
+    for row in _rows:
+        for i in range(0, len(row)):
+            _products.append(math.prod([int(j) for j in row[i : i + 4]]))
+
+    # return the highest number
+    return sorted(_products)[-1]
+
 
 def calculate_diagonal(_rows):
-  _products = []
-  for i in range(0, len(_rows) - 3):
-    for j in range(0, len(_rows[i]) - 3):
-      _products.append(math.prod([int(_rows[i + k][j + k]) for k in range(4)]))
+    _products = []
+    for i in range(0, len(_rows) - 3):
+        for j in range(0, len(_rows[i]) - 3):
+            _products.append(math.prod([int(_rows[i + k][j + k]) for k in range(4)]))
 
-  # return the highest number
-  return sorted(_products)[-1]
+    # return the highest number
+    return sorted(_products)[-1]
+
 
 numbers = """
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
@@ -44,7 +47,7 @@ numbers = """
 numbersList = numbers.split()
 
 # split the numbers into rows. Each row has 20 numbers
-rows = [numbersList[i:i + 20] for i in range(0, len(numbersList), 20)]
+rows = [numbersList[i : i + 20] for i in range(0, len(numbersList), 20)]
 
 # transpose the rows to columns
 columns = [list(i) for i in zip(*rows)]

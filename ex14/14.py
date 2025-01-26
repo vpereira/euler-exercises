@@ -1,11 +1,14 @@
 def generate_even(n):
     return int(n / 2)
 
+
 def generate_odd(n):
     return int(3 * n + 1)
 
+
 def is_even(n):
     return n % 2 == 0
+
 
 currentNumber = 0
 longestChain = {"startNumber": 0, "chain": 0}
@@ -25,4 +28,6 @@ while currentNumber < 1000000:
         longestChain["startNumber"] = currentNumber
         longestChain["chain"] = chain
 
-print(f"Start number: {longestChain['startNumber']}, chain = {longestChain['chain']}") # 837799
+print(
+    f"Start number: {longestChain['startNumber']}, chain = {longestChain['chain']}"
+)  # 837799

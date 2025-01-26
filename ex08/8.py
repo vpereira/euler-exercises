@@ -1,4 +1,5 @@
 import math
+
 highestNumbers = []
 index = 0
 
@@ -26,14 +27,13 @@ strNumber = """
 """
 
 
-lines = ''.join(strNumber.replace("\n",""))
+lines = "".join(strNumber.replace("\n", ""))
 
 
 while index < len(lines) - 1:
-  number = math.prod([int(i) for i in lines[index:index+13]])
-  highestNumbers.append(number)
-  index = index + 1
+    number = math.prod([int(i) for i in lines[index : index + 13]])
+    highestNumbers.append(number)
+    index = index + 1
 
 
 print(f"Highest Number: {sorted(highestNumbers)[-1]}")
-

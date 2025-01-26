@@ -109,4 +109,4 @@ results = 0
 for i in numbers:
     results += int(i[0:11])
 
-print(str(results)[0:10]) # 5537376230
+print(str(results)[0:10])  # 5537376230
