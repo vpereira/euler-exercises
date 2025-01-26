@@ -9,25 +9,6 @@ numberToFactor = 600851475143
 # numberToFactor = 13195
 
 
-def isPrime(n):
-    if n < 2:
-        return False
-    if n == 2:
-        return True
-
-    if n % 2 == 0:
-        return False
-
-    # Generate potential factors using NumPy
-    potential_factors = np.arange(3, int(np.sqrt(n)) + 1, 2)
-    # Check divisibility using vectorized operations
-    for i in potential_factors:
-        if n % i == 0:
-            return False
-
-    return True
-
-
 def factors(n):
     _factors = []
 
