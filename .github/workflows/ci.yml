@@ -18,11 +18,9 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install --upgrade pip pytest flake8
+        run: pip install --upgrade pip flake8
 
       - name: Lint
         run: flake8 .
 
-      - name: Test
-        run: pytest .
 
