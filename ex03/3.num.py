@@ -23,12 +23,11 @@ def factors(n):
         while n % i == 0:
             _factors.append(i)
             n = n // i
-            # Update potential_factors as n decreases
             if i > np.sqrt(n):
                 break
 
     if n > 2:
-        _factors.append(int(n))  # Append the remaining prime factor
+        _factors.append(int(n))
 
     return np.sort(_factors)
 
