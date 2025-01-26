@@ -4,5 +4,6 @@
 
 	Find the sum of all the multiples of 3 or 5 below 1000.
 """
+
 limitNumber = 1000
-print(sum([i for i in range(1, limitNumber) if i % 3 == 0 or i % 5 == 0])) # 233168
+print(sum([i for i in range(1, limitNumber) if i % 3 == 0 or i % 5 == 0]))  # 233168

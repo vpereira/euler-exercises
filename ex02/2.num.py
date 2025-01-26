@@ -7,6 +7,7 @@
 	By considering the terms in the Fibonacci sequence whose values do not
 	exceed four million, find the sum of the even-valued terms.
 """
+
 import numpy as np
 
 # implement using the Binet-Formula
@@ -28,7 +29,7 @@ n_values = np.arange(1, n_max + 1)
 
 # calculate the fibonacci sequence using the Binet-Formula
 # use np.rint to round the values to the nearest integer
-fib_numbers = np.rint((alpha ** n_values - beta ** n_values) / sqrt5).astype(int)
+fib_numbers = np.rint((alpha**n_values - beta**n_values) / sqrt5).astype(int)
 
 # print(f"Last Fibonacci number computed: {fib_numbers[-1]}")
 
@@ -36,5 +37,4 @@ fib_numbers = np.rint((alpha ** n_values - beta ** n_values) / sqrt5).astype(int
 fib_numbers = fib_numbers[fib_numbers < limitNumber]
 even_fib_numbers = fib_numbers[fib_numbers % 2 == 0]
 
-print(f"Sum of even Fibonacci numbers: {np.sum(even_fib_numbers)}") # 4613732
-
+print(f"Sum of even Fibonacci numbers: {np.sum(even_fib_numbers)}")  # 4613732
