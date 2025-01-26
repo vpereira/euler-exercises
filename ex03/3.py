@@ -6,7 +6,6 @@
 numberToFactor = 600851475143
 # numberToFactor = 13195
 
-
 def isPrime(n):
     if n < 2:
         return False
