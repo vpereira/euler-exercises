@@ -40,5 +40,4 @@ cl.enqueue_copy(queue, result_host, output_buffer)
 
 answer = np.sum(result_host)
 
-print("Sum of multiples of 3 or 5 below 1000 is:", answer) # 233168
-
+print("Sum of multiples of 3 or 5 below 1000 is:", answer)  # 233168

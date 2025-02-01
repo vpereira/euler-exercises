@@ -36,5 +36,4 @@ cl.enqueue_copy(queue, fib_sequence, fib_buffer).wait()
 
 even_fib_sum = np.sum(fib_sequence[fib_sequence < 4000000][fib_sequence % 2 == 0])
 
-print(f"Sum of even Fibonacci numbers below 4 million: {even_fib_sum}") # 4
-
+print(f"Sum of even Fibonacci numbers below 4 million: {even_fib_sum}")  # 4
